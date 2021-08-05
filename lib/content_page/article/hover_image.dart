@@ -33,7 +33,7 @@ class _HoverImageState extends State<HoverImage> {
         onHover: (isHovering) {
           if (isHovering) {
             setState(() {
-              this.opacity = 0.8;
+              this.opacity = 0.7;
             });
           } else {
             setState(() {
