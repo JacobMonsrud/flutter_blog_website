@@ -11,16 +11,17 @@ class ArticleContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints){
-        Widget content = Container();
         if (constraints.maxWidth > 1000) {
-          content = DesktopArticleContent();
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 40),
+            child: DesktopArticleContent(),
+          );
         } else {
-          content = MobileArticleContent();
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+            child: MobileArticleContent(),
+          );
         }
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 40),
-          child: content,
-        );
       },
     );
   }

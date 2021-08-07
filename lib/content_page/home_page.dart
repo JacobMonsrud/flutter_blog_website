@@ -19,22 +19,22 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: LayoutBuilder(
         builder: (context, constraints){
-          Widget content = Container();
           if (constraints.maxWidth > 1000) {
-            content = DesktopHomePage();
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 40),
+              child: DesktopHomePage()
+            );
             //print(Theme.of(context).platform.toString() == "TargetPlatform.android");
             //print(MediaQuery.of(context).size.width);
           }
           else {
-            content = MobileHomePage();
+            return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+                child: MobileHomePage()
+            );
             //print(MediaQuery.of(context).size.width);
             //print(Theme.of(context).platform.toString() == "TargetPlatform.android");
-
           }
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 40),
-            child: content,
-          );
         },
       ),
     );
