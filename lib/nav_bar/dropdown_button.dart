@@ -17,7 +17,6 @@ class _DropdownMenuState extends State<DropdownMenu> {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton(
-      initialValue: "Artikler",
       itemBuilder: (BuildContext context) => <PopupMenuEntry<String>>[
         const PopupMenuItem<String>(
           value: "Artikler",
@@ -33,6 +32,7 @@ class _DropdownMenuState extends State<DropdownMenu> {
         ),],
       icon: Icon(Icons.menu),
       iconSize: 40.0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10.0))),
       onSelected: (String value) {
         if (value == "Artikler") {
           this.widget.article_callback();
