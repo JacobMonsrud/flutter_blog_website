@@ -22,7 +22,7 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
             children: [
               // Col 1
               Container(
-                width: 380,
+                width: 360,
                 child: Column(
                   children: [
                     HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/",),
@@ -32,7 +32,7 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
               ),
               // Col 2
               Container(
-                width: 380,
+                width: 360,
                 child: Column(
                   children: [
                     HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/",),
@@ -42,7 +42,7 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
               ),
               // Col 3
               Container(
-                width: 380,
+                width: 360,
                 child: Column(
                   children: [
                     HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/",),
@@ -67,8 +67,16 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                IconButton(onPressed: () => {launch("https://twitter.com")}, icon: Image.asset("assets/images/twitter.png")),
-                IconButton(onPressed: () => {launch("https://facebook.com")}, icon: Image.asset("assets/images/facebook.png")),
+                IconButton(onPressed: () => {launch("https://twitter.com")},
+                  icon: Image.asset("assets/images/twitter.png"),
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                ),
+                IconButton(onPressed: () => {launch("https://facebook.com")},
+                  icon: Image.asset("assets/images/facebook.png"),
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                ),
               ],
             ),
           ),

@@ -60,6 +60,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
                   },
                   style: ButtonStyle(
                     splashFactory: NoSplash.splashFactory,
+                    overlayColor: MaterialStateProperty.all(Colors.transparent)
                   ),
                 ),
               ),
@@ -86,6 +87,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
                   },
                   style: ButtonStyle(
                     splashFactory: NoSplash.splashFactory,
+                    overlayColor: MaterialStateProperty.all(Colors.transparent)
                   ),
                 ),
               ),
@@ -113,6 +115,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
                   },
                   style: ButtonStyle(
                     splashFactory: NoSplash.splashFactory,
+                    overlayColor: MaterialStateProperty.all(Colors.transparent)
                   ),
                 ),
               ),

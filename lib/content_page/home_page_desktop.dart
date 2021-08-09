@@ -24,38 +24,34 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-      ),
-      child: Listener(
-        onPointerSignal: (ps) {
-          if (ps is PointerScrollEvent) {
-            final newOffset = _controller.offset + ps.scrollDelta.dy;
-            if (ps.scrollDelta.dy.isNegative) {
-              _controller.jumpTo(math.max(0, newOffset));
-            } else {
-              _controller.jumpTo(math.min(
-                  _controller.position.maxScrollExtent, newOffset));
-            }
+    return Listener(
+      onPointerSignal: (ps) {
+        if (ps is PointerScrollEvent) {
+          final newOffset = _controller.offset + ps.scrollDelta.dy;
+          if (ps.scrollDelta.dy.isNegative) {
+            _controller.jumpTo(math.max(0, newOffset));
+          } else {
+            _controller.jumpTo(math.min(
+                _controller.position.maxScrollExtent, newOffset));
           }
-        },
-        child: SingleChildScrollView(
-          controller: _controller,
-          physics: NeverScrollableScrollPhysics(),
-          child: Column(
-            children: [
-              NavBar(
-                article_callback: articles_callback,
-                contact_callback: contact_callback,
-                blog_callback: blog_callback,
-              ),
-              AnimatedSwitcher(
-                duration: const Duration(seconds: 0, milliseconds: 400),
-                child: getContent(),
-              ),
-            ],
-          ),
+        }
+      },
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 40),
+        controller: _controller,
+        physics: NeverScrollableScrollPhysics(),
+        child: Column(
+          children: [
+            NavBar(
+              article_callback: articles_callback,
+              contact_callback: contact_callback,
+              blog_callback: blog_callback,
+            ),
+            AnimatedSwitcher(
+              duration: const Duration(seconds: 0, milliseconds: 400),
+              child: getContent(),
+            ),
+          ],
         ),
       ),
     );

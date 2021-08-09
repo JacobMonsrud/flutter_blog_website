@@ -64,8 +64,16 @@ class DesktopContactContent extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                IconButton(onPressed: () => {launch("https://twitter.com")}, icon: Image.asset("assets/images/twitter.png")),
-                IconButton(onPressed: () => {launch("https://facebook.com")}, icon: Image.asset("assets/images/facebook.png")),
+                IconButton(onPressed: () => {launch("https://twitter.com")},
+                  icon: Image.asset("assets/images/twitter.png"),
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                ),
+                IconButton(onPressed: () => {launch("https://facebook.com")},
+                  icon: Image.asset("assets/images/facebook.png"),
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                )
               ],
             ),
           ),
