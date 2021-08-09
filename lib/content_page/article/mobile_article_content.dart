@@ -12,7 +12,7 @@ class MobileArticleContent extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            width: MediaQuery.of(context).size.width,
+            width: MediaQuery.of(context).size.width - 50,
             child: Column(
               children: [
                 HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/",),
@@ -24,13 +24,13 @@ class MobileArticleContent extends StatelessWidget {
           ),
           SizedBox(height: 20,),
           Container(
-            width: MediaQuery.of(context).size.width - 40,
+            width: MediaQuery.of(context).size.width - 70,
             child: Divider(
               color: Colors.black,
             ),
           ),
           Container(
-            width: MediaQuery.of(context).size.width - 40,
+            width: MediaQuery.of(context).size.width - 70,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [

@@ -17,7 +17,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
   ArticleContent _articleContent = const ArticleContent();
   ContactContent _contactContent = const ContactContent();
   BlogContent _blogContent = const BlogContent();
-  int _content = 2;
+  int _content = 0;
 
   @override
   Widget build(BuildContext context) {

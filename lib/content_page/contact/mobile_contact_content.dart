@@ -5,8 +5,8 @@ import 'package:flutter/gestures.dart';
 
 class MobileContactContent extends StatelessWidget {
 
-  final TextStyle _textStyleBold = const TextStyle(fontSize: 32, fontFamily: "Exo2", fontWeight: FontWeight.bold);
-  final TextStyle _textStyle = const TextStyle(fontSize: 32, fontFamily: "Exo2", fontWeight: FontWeight.w100);
+  final TextStyle _textStyleBold = const TextStyle(fontSize: 26, fontFamily: "Exo2", fontWeight: FontWeight.bold);
+  final TextStyle _textStyle = const TextStyle(fontSize: 26, fontFamily: "Exo2", fontWeight: FontWeight.w100);
 
   const MobileContactContent({Key? key}) : super(key: key);
 
@@ -18,7 +18,7 @@ class MobileContactContent extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            width: MediaQuery.of(context).size.width - 16,
+            width: MediaQuery.of(context).size.width - 36,
             child: SelectableText.rich(
                 TextSpan(
                     text: "Ud & Se\nDossier\nEuroman\nBørsen\nZetland\nJyllands-Posten\nMediano\nForlaget 28B\nPeople's Press\nPolitikens Forlag\nm.fl.\n\n",
@@ -41,14 +41,14 @@ class MobileContactContent extends StatelessWidget {
           SizedBox(height: 20,),
           Container(
             alignment: Alignment.topCenter,
-            width: MediaQuery.of(context).size.width - 16,
+            width: MediaQuery.of(context).size.width - 36,
             child: Image.asset(
               "assets/images/kopi.jpg",
             ),
           ),
           SizedBox(height: 20,),
           Container(
-            width: MediaQuery.of(context).size.width - 40,
+            width: MediaQuery.of(context).size.width - 70,
             child: Divider(
               color: Colors.black,
               //indent: MediaQuery.of(context).size.width * 0.25,
@@ -56,7 +56,7 @@ class MobileContactContent extends StatelessWidget {
             ),
           ),
           Container(
-            width: MediaQuery.of(context).size.width - 40,
+            width: MediaQuery.of(context).size.width - 70,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [

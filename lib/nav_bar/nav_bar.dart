@@ -26,8 +26,12 @@ class NavBar extends StatelessWidget {
           );
         } else {
           return Padding(
-            padding: const EdgeInsets.fromLTRB(40, 120, 40, 50),
-            child: MobileNavBar(),
+            padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
+            child: MobileNavBar(
+              article_callback: this.article_callback,
+              contact_callback: this.contact_callback,
+              blog_callback: this.blog_callback,
+            ),
           );
         }
       },
