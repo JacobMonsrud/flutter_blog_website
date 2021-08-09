@@ -11,16 +11,17 @@ class ContactContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints){
-        Widget content = Container();
         if (constraints.maxWidth > 1000) {
-          content = DesktopContactContent();
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 40),
+            child: DesktopContactContent(),
+          );
         } else {
-          content = MobileContactContent();
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+            child: MobileContactContent(),
+          );
         }
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 40),
-          child: content,
-        );
       },
     );
   }

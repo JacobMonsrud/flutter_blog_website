@@ -49,7 +49,7 @@ flutter:
   assets:
    - assets/images/toto.jpg
    - assets/images/kamp.jpg
-   - assets/images/kopi.JPG
+   - assets/images/kopi.jpg
    - assets/images/twitter.png
    - assets/images/facebook.png
 

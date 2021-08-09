@@ -16,6 +16,7 @@ class MobileArticleContent extends StatelessWidget {
             child: Column(
               children: [
                 HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/",),
+                HoverImage(imageUrl: "assets/images/kopi.jpg", articleUrl: "https://www.google.com/",),
                 HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/",),
                 HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/",),
               ],
@@ -26,8 +27,6 @@ class MobileArticleContent extends StatelessWidget {
             width: MediaQuery.of(context).size.width - 40,
             child: Divider(
               color: Colors.black,
-              //indent: MediaQuery.of(context).size.width * 0.25,
-              //endIndent: MediaQuery.of(context).size.width * 0.25,
             ),
           ),
           Container(

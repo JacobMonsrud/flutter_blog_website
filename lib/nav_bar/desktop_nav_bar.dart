@@ -21,15 +21,12 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      //height: MediaQuery.of(context).size.height,
       child: Column(
         children: [
           Container(
             width: 220,
             child: Divider(
               color: Colors.black,
-              //indent: MediaQuery.of(context).size.width * 0.42,
-              //endIndent: MediaQuery.of(context).size.width * 0.42,
             ),
           ),
           SelectableText("Amanda Stensgaard",
@@ -119,7 +116,6 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
                   ),
                 ),
               ),
-
             ],
           ),
         ],
