@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:amanda_stensgaard/content_page/article/hover_image.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';

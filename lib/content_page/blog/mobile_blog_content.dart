@@ -6,7 +6,7 @@ class MobileBlogContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("mobile blog"),
+      child: Text("Mobile blog on " + Theme.of(context).platform.toString() + " width: " + MediaQuery.of(context).size.width.toString()),
     );
   }
 }
