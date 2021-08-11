@@ -3,12 +3,26 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 import 'package:url_launcher/url_launcher.dart';
 
-class DesktopContactContent extends StatelessWidget {
-
-  final TextStyle _textStyleBold = const TextStyle(fontSize: 32, fontFamily: "Exo2", fontWeight: FontWeight.bold);
-  final TextStyle _textStyle = const TextStyle(fontSize: 32, fontFamily: "Exo2", fontWeight: FontWeight.w100);
+class DesktopContactContent extends StatefulWidget {
 
   const DesktopContactContent({Key? key}) : super(key: key);
+
+  @override
+  _DesktopContactContentState createState() => _DesktopContactContentState();
+}
+
+class _DesktopContactContentState extends State<DesktopContactContent> {
+  final TextStyle _textStyleBold = const TextStyle(fontSize: 32, fontFamily: "Exo2", fontWeight: FontWeight.bold);
+
+  final TextStyle _textStyle = const TextStyle(fontSize: 32, fontFamily: "Exo2", fontWeight: FontWeight.w100);
+
+  final image = Image.asset("assets/images/kopi.jpg");
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    precacheImage(image.image, context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -44,9 +58,7 @@ class DesktopContactContent extends StatelessWidget {
               Container(
                 alignment: Alignment.centerRight,
                 width: 460,
-                child: Image.asset(
-                  "assets/images/kopi.jpg",
-                ),
+                child: image,
               ),
             ],
           ),
