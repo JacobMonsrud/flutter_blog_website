@@ -28,8 +28,8 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                 width: 360,
                 child: Column(
                   children: [
-                    HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/",),
-                    HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/",),
+                    HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false,),
+                    HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: false),
                   ],
                 ),
               ),
@@ -38,8 +38,8 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                 width: 360,
                 child: Column(
                   children: [
-                    HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/",),
-                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/",),
+                    HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
                   ],
                 ),
               ),
@@ -48,9 +48,9 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                 width: 360,
                 child: Column(
                   children: [
-                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/",),
-                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/",),
-                    HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/",),
+                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false),
                   ],
                 ),
               ),
@@ -61,6 +61,7 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
             width: 850,
             child: Divider(
               color: Colors.black,
+              thickness: 1.0,
               //indent: MediaQuery.of(context).size.width * 0.25,
               //endIndent: MediaQuery.of(context).size.width * 0.25,
             ),

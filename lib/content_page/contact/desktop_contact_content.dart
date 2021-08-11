@@ -21,7 +21,7 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    precacheImage(image.image, context);
+    precacheImage(this.image.image, context);
   }
 
   @override
@@ -58,7 +58,7 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
               Container(
                 alignment: Alignment.centerRight,
                 width: 460,
-                child: image,
+                child: this.image,
               ),
             ],
           ),
@@ -67,6 +67,7 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
             width: 850,
             child: Divider(
               color: Colors.black,
+              thickness: 1.0,
               //indent: MediaQuery.of(context).size.width * 0.25,
               //endIndent: MediaQuery.of(context).size.width * 0.25,
             ),

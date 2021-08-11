@@ -26,6 +26,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
           width: 220,
           child: Divider(
             color: Colors.black,
+            thickness: 1.0,
           ),
         ),
         SelectableText("Amanda Stensgaard",
@@ -63,7 +64,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
                 ),
               ),
             ),
-            Container(child: VerticalDivider(color: Colors.black, endIndent: 0.0, indent: 0.0, width: 10,),height: 70,),
+            Container(child: VerticalDivider(color: Colors.black, thickness: 1.0 , endIndent: 0.0, indent: 0.0, width: 10,),height: 70,),
             //SizedBox(width: 120,),
             Container(
               height: 80,
@@ -91,7 +92,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
               ),
             ),
             //SizedBox(width: 120,),
-            Container(child: VerticalDivider(color: Colors.black, endIndent: 0.0, indent: 0.0, width: 10,),height: 70,),
+            Container(child: VerticalDivider(color: Colors.black, thickness: 1.0, endIndent: 0.0, indent: 0.0, width: 10,),height: 70,),
             //SizedBox(width: 120,),
             Container(
               height: 80,

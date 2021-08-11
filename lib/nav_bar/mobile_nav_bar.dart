@@ -34,6 +34,7 @@ class _MobileNavBarState extends State<MobileNavBar> {
           width: MediaQuery.of(context).size.width - 130,
           child: Divider(
             color: Colors.black,
+            thickness: 1.0,
           ),
         ),
         SelectableText("Amanda",

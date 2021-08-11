@@ -5,8 +5,9 @@ class HoverImage extends StatefulWidget {
 
   final String imageUrl;
   final String articleUrl;
+  final bool mobile;
 
-  const HoverImage({Key? key, required this.imageUrl, required this.articleUrl}) : super(key: key);
+  const HoverImage({Key? key, required this.imageUrl, required this.articleUrl, required this.mobile}) : super(key: key);
 
   @override
   _HoverImageState createState() => _HoverImageState();
@@ -25,8 +26,8 @@ class _HoverImageState extends State<HoverImage> {
           borderRadius: BorderRadius.circular(10.0),
           child: Image.asset(
               this.widget.imageUrl,
-              color: Color.fromRGBO(128,128,128, this.opacity),
-              colorBlendMode: BlendMode.srcATop
+              color: this.widget.mobile ? null : Color.fromRGBO(128,128,128, this.opacity),
+              colorBlendMode: this.widget.mobile ? null :  BlendMode.srcATop
           ),
         ),
         onTap: () {launch(this.widget.articleUrl);},

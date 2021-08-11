@@ -2,31 +2,38 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'hover_image.dart';
 
-class MobileArticleContent extends StatelessWidget {
+class MobileArticleContent extends StatefulWidget {
   const MobileArticleContent({Key? key}) : super(key: key);
 
+  @override
+  _MobileArticleContentState createState() => _MobileArticleContentState();
+}
+
+class _MobileArticleContentState extends State<MobileArticleContent> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
             width: MediaQuery.of(context).size.width - 50,
             child: Column(
               children: [
-                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/",),
-                HoverImage(imageUrl: "assets/images/kopi.jpg", articleUrl: "https://www.google.com/",),
-                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/",),
-                HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/",),
+                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/kopi.jpg", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: true),
               ],
             ),
           ),
-          SizedBox(height: 20,),
+          SizedBox(height: 7,),
           Container(
             width: MediaQuery.of(context).size.width - 70,
             child: Divider(
               color: Colors.black,
+              thickness: 1.0,
             ),
           ),
           Container(
