@@ -9,7 +9,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //precacheImage(AssetImage("assets/images/mig2.JPG"), context);
     return MaterialApp(
       title: 'Amanda Stensgaard',
       debugShowCheckedModeBanner: false,
