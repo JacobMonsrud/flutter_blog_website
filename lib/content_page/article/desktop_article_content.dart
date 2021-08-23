@@ -11,8 +11,6 @@ class DesktopArticleContent extends StatefulWidget {
 
 class _DesktopArticleContentState extends State<DesktopArticleContent> {
 
-
-
   @override
   Widget build(BuildContext context) {
     return Padding(

@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: LayoutBuilder(
         builder: (context, constraints){
-          if (constraints.maxWidth > 1000) {
+          if (!isMobile()) {
             return DesktopHomePage();
             //print(Theme.of(context).platform.toString() == "TargetPlatform.android");
             //print(MediaQuery.of(context).size.width);
@@ -32,6 +32,10 @@ class _HomePageState extends State<HomePage> {
         },
       ),
     );
+  }
+
+  bool isMobile() {
+    return Theme.of(context).platform.toString() == "TargetPlatform.android" || Theme.of(context).platform.toString() == "TargetPlatform.iOS";
   }
 
 }

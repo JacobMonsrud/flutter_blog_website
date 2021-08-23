@@ -17,6 +17,8 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
   final TextStyle _textStyle = const TextStyle(fontSize: 32, fontFamily: "Exo2", fontWeight: FontWeight.w100);
 
   final image = Image.asset("assets/images/kopi.jpg");
+  double _addedHeight = 0;
+
 
   @override
   void didChangeDependencies() {
@@ -63,6 +65,11 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
             ],
           ),
           SizedBox(height: 25,),
+          //REMOVE
+          Container(
+            height: this._addedHeight,
+          ),
+          //REMOVE
           Container(
             width: 850,
             child: Divider(

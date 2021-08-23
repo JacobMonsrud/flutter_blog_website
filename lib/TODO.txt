@@ -1,3 +1,5 @@
 [] Fix jump in AnimationSwitcher on desktop
-[] Platform check instead of width
+[ok] Platform check instead of width
 [] Preload contact image when site is loaded for the first time on desktop
+[] Smoother hover animation on article images.
+[] Nicer menu on mobile

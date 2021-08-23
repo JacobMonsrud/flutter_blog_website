@@ -16,14 +16,16 @@ class DesktopHomePage extends StatefulWidget {
 
 class _DesktopHomePageState extends State<DesktopHomePage> {
 
-  ArticleContent _articleContent = const ArticleContent();
-  ContactContent _contactContent = const ContactContent();
-  BlogContent _blogContent = const BlogContent();
+  ArticleContent _articleContent = ArticleContent(); //key: GlobalKey());
+  ContactContent _contactContent = ContactContent(); //key: GlobalKey());
+  BlogContent _blogContent = BlogContent(); //key: GlobalKey());
   int _content = 0;
   final _controller = ScrollController();
 
   @override
   Widget build(BuildContext context) {
+    //print("article key " + _articleContent.key.toString());
+    //print("contact key " + _contactContent.key.toString());
     return Listener(
       onPointerSignal: (ps) {
         if (ps is PointerScrollEvent) {
