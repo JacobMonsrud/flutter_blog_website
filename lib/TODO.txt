@@ -3,3 +3,9 @@
 [] Preload contact image when site is loaded for the first time on desktop
 [] Smoother hover animation on article images.
 [] Nicer menu on mobile
+
+[] How to upload new pictures and edit columns? Python script.
+    [] Read columns from file
+    [] Upload image
+    [] Edit column layout
+        - SOLUTION: Let owner join github repo and push new images and change the column sheet. Let a python script alter the dart files and do the git.

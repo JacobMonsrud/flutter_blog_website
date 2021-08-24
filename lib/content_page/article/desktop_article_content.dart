@@ -1,16 +1,12 @@
 import 'package:amanda_stensgaard/content_page/article/hover_image.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 class DesktopArticleContent extends StatefulWidget {
   const DesktopArticleContent({Key? key}) : super(key: key);
-
   @override
   _DesktopArticleContentState createState() => _DesktopArticleContentState();
 }
-
 class _DesktopArticleContentState extends State<DesktopArticleContent> {
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,8 +22,10 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                 width: 360,
                 child: Column(
                   children: [
-                    HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false,),
+                    // Col1Start
+                    HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false),
                     HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    // Col1End
                   ],
                 ),
               ),
@@ -36,8 +34,13 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                 width: 360,
                 child: Column(
                   children: [
+                    // Col2Start
                     HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: false),
                     HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
+                    // Col2End
                   ],
                 ),
               ),
@@ -46,9 +49,12 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                 width: 360,
                 child: Column(
                   children: [
-                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
+                    // Col3Start
                     HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
                     HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    // Col3End
                   ],
                 ),
               ),
@@ -86,5 +92,4 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
       ),
     );
   }
-
 }
