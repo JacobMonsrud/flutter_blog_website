@@ -50,7 +50,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
               blog_callback: blog_callback,
             ),
             AnimatedSwitcher(
-              duration: const Duration(seconds: 0, milliseconds: 300),
+              duration: const Duration(seconds: 0, milliseconds: 400),
               child: getContent(),
             ),
           ],

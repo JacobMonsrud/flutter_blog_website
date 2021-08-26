@@ -17,8 +17,7 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
   final TextStyle _textStyle = const TextStyle(fontSize: 32, fontFamily: "Exo2", fontWeight: FontWeight.w100);
 
   final image = Image.asset("assets/images/kopi.jpg");
-  double _addedHeight = 0;
-
+  double _addedHeight = 1348.0411311053986;
 
   @override
   void didChangeDependencies() {
@@ -28,6 +27,11 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(milliseconds: 400), () {
+      setState(() {
+        this._addedHeight = 0.0;
+      });
+    });
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
       child: Column(
@@ -67,10 +71,6 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
           SizedBox(height: 25,),
           //REMOVE
           Container(
-            height: this._addedHeight,
-          ),
-          //REMOVE
-          Container(
             width: 850,
             child: Divider(
               color: Colors.black,
@@ -96,6 +96,9 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
                 )
               ],
             ),
+          ),
+          Container(
+            height: this._addedHeight,
           ),
         ],
       ),

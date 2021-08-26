@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'hover_image.dart';
-
 class MobileArticleContent extends StatefulWidget {
   const MobileArticleContent({Key? key}) : super(key: key);
-
   @override
   _MobileArticleContentState createState() => _MobileArticleContentState();
 }
-
 class _MobileArticleContentState extends State<MobileArticleContent> {
   @override
   Widget build(BuildContext context) {
@@ -21,10 +18,20 @@ class _MobileArticleContentState extends State<MobileArticleContent> {
             width: MediaQuery.of(context).size.width - 50,
             child: Column(
               children: [
-                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
-                HoverImage(imageUrl: "assets/images/kopi.jpg", articleUrl: "https://www.google.com/", mobile: true),
+                // ColStart
+                HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: true),
                 HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
                 HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
+                // ColEnd
               ],
             ),
           ),

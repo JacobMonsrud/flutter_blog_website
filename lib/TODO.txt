@@ -1,11 +1,16 @@
-[] Fix jump in AnimationSwitcher on desktop
+[ok] Fix jump in AnimationSwitcher on desktop
+[] Use python script to calculate height before compiling in desktop contact (_added_height)?
 [ok] Platform check instead of width
 [] Preload contact image when site is loaded for the first time on desktop
 [] Smoother hover animation on article images.
 [] Nicer menu on mobile
 
-[] How to upload new pictures and edit columns? Python script.
-    [] Read columns from file
-    [] Upload image
-    [] Edit column layout
+[ok] How to upload new pictures and edit columns? Python script.
+    [ok] Read columns from file
+    [ok] Upload image
+    [ok] Edit column layout
         - SOLUTION: Let owner join github repo and push new images and change the column sheet. Let a python script alter the dart files and do the git.
+
+
+NOTES TO USER:
+Images must be AT LEAST 360x360
