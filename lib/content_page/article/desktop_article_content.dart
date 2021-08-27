@@ -39,8 +39,6 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                     HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: false),
                     HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
                     HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
                     // Col2End
                   ],
                 ),
@@ -54,7 +52,7 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                     HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
                     HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false),
                     HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: false),
                     // Col3End
                   ],
                 ),

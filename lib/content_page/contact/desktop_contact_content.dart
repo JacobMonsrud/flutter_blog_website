@@ -17,7 +17,7 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
   final TextStyle _textStyle = const TextStyle(fontSize: 32, fontFamily: "Exo2", fontWeight: FontWeight.w100);
 
   final image = Image.asset("assets/images/kopi.jpg");
-  double _addedHeight = 1348.0411311053986;
+  double _addedHeight = 1217.374464438732;
 
   @override
   void didChangeDependencies() {

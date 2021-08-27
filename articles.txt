@@ -7,11 +7,9 @@ column2:
 "toto.jpg", "https://www.google.com/"
 "twitter.png", "https://www.google.com/"
 "twitter.png", "https://www.google.com/"
-"twitter.png", "https://www.google.com/"
-"twitter.png", "https://www.google.com/"
 
 column3:
 "twitter.png", "https://www.google.com/"
 "kamp.jpg", "https://www.google.com/"
 "kamp.jpg", "https://www.google.com/"
-"kamp.jpg", "https://www.google.com/"
+"toto.jpg", "https://www.google.com/"
