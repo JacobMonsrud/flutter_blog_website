@@ -2,6 +2,7 @@ column1:
 "kamp.jpg", "https://www.google.com/"
 "toto.jpg", "https://www.google.com/"
 "twitter.png", "https://www.google.com/"
+"kamp.png", "https://www.google.com/"
 
 column2:
 "toto.jpg", "https://www.google.com/"

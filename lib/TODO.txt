@@ -2,6 +2,7 @@
 [] Use python script to calculate height before compiling in desktop contact (_added_height)?
 [ok] Platform check instead of width
 [] Preload contact image when site is loaded for the first time on desktop
+    - Prob in the desktop_article file, add the precacheImage call
 [] Smoother hover animation on article images.
 [] Nicer menu on mobile
 

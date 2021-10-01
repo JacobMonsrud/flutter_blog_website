@@ -1,3 +1,4 @@
+import 'package:amanda_stensgaard/content_page/bottom_of_page.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
@@ -79,24 +80,7 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
               //endIndent: MediaQuery.of(context).size.width * 0.25,
             ),
           ),
-          Container(
-            width: 850,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                IconButton(onPressed: () => {launch("https://twitter.com")},
-                  icon: Image.asset("assets/images/twitter.png"),
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                ),
-                IconButton(onPressed: () => {launch("https://facebook.com")},
-                  icon: Image.asset("assets/images/facebook.png"),
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                )
-              ],
-            ),
-          ),
+          BottomOfPage(),
           Container(
             height: this._addedHeight,
           ),
