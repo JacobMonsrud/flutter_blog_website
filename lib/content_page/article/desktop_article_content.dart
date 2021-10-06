@@ -24,9 +24,9 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                 child: Column(
                   children: [
                     // Col1Start
-                    HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/trees.jpeg", articleUrl: "https://www.google.com/", mobile: false),
                     // Col1End
                   ],
                 ),
@@ -37,9 +37,9 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                 child: Column(
                   children: [
                     // Col2Start
-                    HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/trees.jpeg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/trees.jpeg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: false),
                     // Col2End
                   ],
                 ),
@@ -50,10 +50,10 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                 child: Column(
                   children: [
                     // Col3Start
-                    HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: false),
                     // Col3End
                   ],
                 ),
@@ -61,15 +61,6 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
             ],
           ),
           SizedBox(height: 20,),
-          Container(
-            width: 850,
-            child: Divider(
-              color: Colors.black,
-              thickness: 1.0,
-              //indent: MediaQuery.of(context).size.width * 0.25,
-              //endIndent: MediaQuery.of(context).size.width * 0.25,
-            ),
-          ),
           BottomOfPage(),
         ],
       ),

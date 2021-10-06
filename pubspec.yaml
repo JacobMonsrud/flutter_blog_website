@@ -52,6 +52,9 @@ flutter:
    - assets/images/kopi.jpg
    - assets/images/twitter.png
    - assets/images/facebook.png
+   - assets/images/grass.jpg
+   - assets/images/lake.jpg
+   - assets/images/trees.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -75,6 +78,8 @@ flutter:
         - asset: assets/fonts/Exo2-VariableFont_wght.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-  #
+   - family: Times
+     fonts:
+       - asset: assets/fonts/times.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

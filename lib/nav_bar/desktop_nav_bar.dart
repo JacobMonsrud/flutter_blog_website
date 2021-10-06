@@ -22,17 +22,11 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          width: 220,
-          child: Divider(
-            color: Colors.black,
-            thickness: 1.0,
-          ),
-        ),
         SelectableText("Amanda Stensgaard",
           style: TextStyle(
             color: Colors.black,
-            fontSize: 32.0,
+            fontSize: 42.0,
+            fontFamily: "Nunito"
           ),
         ),
         SizedBox(height: 30.0,),
@@ -47,7 +41,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
                   style: TextStyle(
                       color: _articles_pressed ? Colors.blueAccent : Colors.black,
                       fontSize: 32.0,
-                      fontWeight: FontWeight.bold
+                      fontWeight: FontWeight.bold,
                   ),
                 ),
                 onPressed: () {

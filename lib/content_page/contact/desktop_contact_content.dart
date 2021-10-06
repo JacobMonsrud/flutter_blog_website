@@ -13,9 +13,9 @@ class DesktopContactContent extends StatefulWidget {
 }
 
 class _DesktopContactContentState extends State<DesktopContactContent> {
-  final TextStyle _textStyleBold = const TextStyle(fontSize: 32, fontFamily: "Exo2", fontWeight: FontWeight.bold);
+  final TextStyle _textStyleBold = const TextStyle(fontSize: 32, fontFamily: "Times", fontWeight: FontWeight.bold);
 
-  final TextStyle _textStyle = const TextStyle(fontSize: 32, fontFamily: "Exo2", fontWeight: FontWeight.w100);
+  final TextStyle _textStyle = const TextStyle(fontSize: 32, fontFamily: "Times", fontWeight: FontWeight.w100);
 
   final image = Image.asset("assets/images/kopi.jpg");
   double _addedHeight = 1217.374464438732;
@@ -70,16 +70,6 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
             ],
           ),
           SizedBox(height: 25,),
-          //REMOVE
-          Container(
-            width: 850,
-            child: Divider(
-              color: Colors.black,
-              thickness: 1.0,
-              //indent: MediaQuery.of(context).size.width * 0.25,
-              //endIndent: MediaQuery.of(context).size.width * 0.25,
-            ),
-          ),
           BottomOfPage(),
           Container(
             height: this._addedHeight,
