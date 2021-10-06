@@ -22,7 +22,15 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SelectableText("Amanda Stensgaard",
+        SelectableText(
+          "Journalist",
+          style: TextStyle(
+              color: Colors.black,
+              fontSize: 22.0,
+          ),
+        ),
+        SelectableText(
+          "Amanda Stensgaard",
           style: TextStyle(
             color: Colors.black,
             fontSize: 42.0,
@@ -39,7 +47,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
               child: TextButton(
                 child: Text("Artikler",
                   style: TextStyle(
-                      color: _articles_pressed ? Colors.blueAccent : Colors.black,
+                      color: _articles_pressed ? Colors.lightGreen : Colors.black,
                       fontSize: 32.0,
                       fontWeight: FontWeight.bold,
                   ),
@@ -66,7 +74,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
               child: TextButton(
                 child: Text("Madblog",
                   style: TextStyle(
-                      color: _blog_pressed ? Colors.blueAccent : Colors.black,
+                      color: _blog_pressed ? Colors.lightGreen : Colors.black,
                       fontSize: 32.0,
                       fontWeight: FontWeight.bold
                   ),
@@ -94,7 +102,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
               child: TextButton(
                 child: Text("Kontakt",
                   style: TextStyle(
-                    color: _contact_pressed ? Colors.blueAccent : Colors.black,
+                    color: _contact_pressed ? Colors.lightGreen : Colors.black,
                     fontSize: 32.0,
                     fontWeight: FontWeight.bold
                   ),

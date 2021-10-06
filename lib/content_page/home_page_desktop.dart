@@ -2,6 +2,7 @@ import 'package:amanda_stensgaard/nav_bar/nav_bar.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
+import 'package:url_launcher/url_launcher.dart';
 
 import 'article/articles_content.dart';
 import 'blog/blog_content.dart';
@@ -66,9 +67,10 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
   }
 
   void blog_callback() {
-    setState(() {
-      this._content = 1;
-    });
+    launch("https://youtube.com");
+    //setState(() {
+    //  this._content = 1;
+    //});
   }
 
   void contact_callback() {

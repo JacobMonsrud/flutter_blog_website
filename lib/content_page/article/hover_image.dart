@@ -3,11 +3,10 @@ import 'package:url_launcher/url_launcher.dart';
 
 class HoverImage extends StatefulWidget {
 
-  final String imageUrl;
-  final String articleUrl;
+  final String imageUrl, articleUrl, header, text;
   final bool mobile;
 
-  const HoverImage({Key? key, required this.imageUrl, required this.articleUrl, required this.mobile}) : super(key: key);
+  const HoverImage({Key? key, required this.imageUrl, required this.articleUrl, required this.mobile, required this.header, required this.text}) : super(key: key);
 
   @override
   _HoverImageState createState() => _HoverImageState();
@@ -15,10 +14,9 @@ class HoverImage extends StatefulWidget {
 
 class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateMixin {
 
-  double opacity = 0.005;
-
   late AnimationController _controller;
   late Animation<double> _opacityAnimation;
+  late Animation<Color?> _colorAnimation;
 
   @override
   void initState() {
@@ -29,6 +27,8 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
     );
 
     _opacityAnimation = Tween<double>(begin: 0.005, end: 0.7).animate(_controller);
+
+    _colorAnimation = ColorTween(begin: Colors.transparent, end: Colors.black).animate(_controller);
 
     _controller.addListener(() {
       setState(() {});
@@ -43,12 +43,52 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
         child: MouseRegion(
           onEnter: (s) {_controller.forward();},
           onExit: (s) {_controller.reverse();},
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10.0),
-            child: Image.asset(
-                this.widget.imageUrl,
-                color: this.widget.mobile ? null : Color.fromRGBO(128,128,128, this._opacityAnimation.value),
-                colorBlendMode: this.widget.mobile ? null : BlendMode.srcATop
+          child: GestureDetector(
+            onTap: () {launch(this.widget.articleUrl);},
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Image.asset(
+                    this.widget.imageUrl,
+                    color: this.widget.mobile ? null : Color.fromRGBO(128,128,128, this._opacityAnimation.value),
+                    colorBlendMode: this.widget.mobile ? null : BlendMode.srcATop
+                  ),
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      this.widget.header,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: _colorAnimation.value,
+                        fontSize: 32,
+                        fontWeight: FontWeight.w100
+                      ),
+                    ),
+                    Text(
+                      "---",
+                      style: TextStyle(
+                          color: _colorAnimation.value,
+                          fontSize: 32,
+                          fontWeight: FontWeight.w100
+                      ),
+                    ),
+                    Text(
+                      this.widget.text,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: _colorAnimation.value,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w100
+                      ),
+                    )
+                  ],
+                )
+              ]
             ),
           ),
         ),

@@ -24,9 +24,9 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                 child: Column(
                   children: [
                     // Col1Start
-                    HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/trees.jpeg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: false, header: "Når turen går til rom", text: "En artikel om rom, med romromromrormormormormrormo",),
+                    HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: false, header: "Flere dage flere dage", text: "For anyone who is reaching here and is not able to solve their issue, I used to make my widget horizontally",),
+                    HoverImage(imageUrl: "assets/images/trees.jpeg", articleUrl: "https://www.google.com/", mobile: false,  header: "Se mig!", text: "En artikel om mig.",),
                     // Col1End
                   ],
                 ),
@@ -37,9 +37,9 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                 child: Column(
                   children: [
                     // Col2Start
-                    HoverImage(imageUrl: "assets/images/trees.jpeg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/trees.jpeg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/trees.jpeg", articleUrl: "https://www.google.com/", mobile: false,  header: "Se mig!", text: "En artikel om mig."),
+                    HoverImage(imageUrl: "assets/images/trees.jpeg", articleUrl: "https://www.google.com/", mobile: false,  header: "Se mig!", text: "En artikel om mig."),
+                    HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: false,  header: "Flere dage flere dage", text: "For anyone who is reaching here and is not able to solve their issue, I used to make my widget horizontally"),
                     // Col2End
                   ],
                 ),
@@ -50,10 +50,10 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
                 child: Column(
                   children: [
                     // Col3Start
-                    HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: false),
-                    HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: false),
+                    HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: false, header: "Flere dage flere dage", text: "For anyone who is reaching here and is not able to solve their issue, I used to make my widget horizontally"),
+                    HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: false, header: "Når turen går til rom", text: "En artikel om rom, med romromromrormormormormrormo",),
+                    HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: false, header: "Når turen går til rom", text: "En artikel om rom, med romromromrormormormormormo",),
+                    HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: false, header: "Flere dage flere dage", text: "For anyone who is reaching here and is not able to solve their issue, I used to make my widget horizontally"),
                     // Col3End
                   ],
                 ),

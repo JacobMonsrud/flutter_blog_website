@@ -19,16 +19,16 @@ class _MobileArticleContentState extends State<MobileArticleContent> {
             child: Column(
               children: [
                 // ColStart
-                HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true),
-                HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: true),
-                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
-                HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: true),
-                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
-                HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true),
-                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
-                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true),
-                HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true),
-                HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: true),
+                HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
                 // ColEnd
               ],
             ),
