@@ -40,14 +40,14 @@ class _MobileContactContentState extends State<MobileContactContent> {
                     style: this._textStyleBold,
                     children: <TextSpan>[
                       TextSpan(
-                        text: "Journalist\nAmanda Stensgaard\n+45 28948214\n",
+                        text: "Amanda Stensgaard\n+45 98765432\n",
                         style: this._textStyle,
                       ),
                       TextSpan(
-                          text: "ryehauge@gmail.com",
+                          text: "amanda...@gmail.com",
                           style: this._textStyle,
                           recognizer: TapGestureRecognizer()
-                            ..onTap = () => {launch("mailto:ryehauge@gmail.com")}
+                            ..onTap = () => {launch("mailto:amanda...@gmail.com")}
                       )
                     ]
                 )
