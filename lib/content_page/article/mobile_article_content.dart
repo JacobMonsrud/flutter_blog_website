@@ -6,6 +6,7 @@ class MobileArticleContent extends StatefulWidget {
   @override
   _MobileArticleContentState createState() => _MobileArticleContentState();
 }
+
 class _MobileArticleContentState extends State<MobileArticleContent> {
   @override
   Widget build(BuildContext context) {
@@ -19,16 +20,16 @@ class _MobileArticleContentState extends State<MobileArticleContent> {
             child: Column(
               children: [
                 // ColStart
-                HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/trees.jpeg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/trees.jpeg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/lake.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
                 HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
-                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
-                HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
-                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
+                HoverImage(imageUrl: "assets/images/grass.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
                 HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
-                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
-                HoverImage(imageUrl: "assets/images/twitter.png", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
-                HoverImage(imageUrl: "assets/images/kamp.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
-                HoverImage(imageUrl: "assets/images/toto.jpg", articleUrl: "https://www.google.com/", mobile: true,  header: "Se mig!", text: "En artikel om mig."),
                 // ColEnd
               ],
             ),
@@ -46,8 +47,11 @@ class _MobileArticleContentState extends State<MobileArticleContent> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                IconButton(onPressed: () => {launch("https://twitter.com")}, icon: Image.asset("assets/images/twitter.png")),
-                IconButton(onPressed: () => {launch("https://facebook.com")}, icon: Image.asset("assets/images/facebook.png")),
+                IconButton(onPressed: () => {launch("https://linkedin.com")},
+                  icon: Image.asset("assets/images/linkedin.png"),
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                ),
               ],
             ),
           ),
