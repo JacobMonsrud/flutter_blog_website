@@ -51,7 +51,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
               blog_callback: blog_callback,
             ),
             AnimatedSwitcher(
-              duration: const Duration(seconds: 0, milliseconds: 400),
+              duration: const Duration(seconds: 0, milliseconds: 0),
               child: getContent(),
             ),
           ],
@@ -67,7 +67,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
   }
 
   void blog_callback() {
-    launch("https://youtube.com");
+    launch("https://filibaba.dk");
     //setState(() {
     //  this._content = 1;
     //});

@@ -17,7 +17,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(244, 226, 198, 1),
+      //backgroundColor: Color.fromRGBO(244, 226, 198, 1),
+      backgroundColor: Color.fromRGBO(242, 238, 228, 1),
+      //backgroundColor: Color.fromRGBO(248, 248, 255, 1),
       body: LayoutBuilder(
         builder: (context, constraints){
           if (!isMobile()) {

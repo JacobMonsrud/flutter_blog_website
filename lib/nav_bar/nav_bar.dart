@@ -23,7 +23,7 @@ class _NavBarState extends State<NavBar> {
       builder: (context, constraints){
         if (!isMobile()) {
           return Padding(
-            padding: const EdgeInsets.fromLTRB(40, 120, 40, 50),
+            padding: const EdgeInsets.fromLTRB(40, 70, 40, 50),
             child: DesktopNavBar(
               article_callback: this.widget.article_callback,
               contact_callback: this.widget.contact_callback,

@@ -28,7 +28,7 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
 
     _opacityAnimation = Tween<double>(begin: 0.005, end: 0.7).animate(_controller);
 
-    _colorAnimation = ColorTween(begin: Colors.transparent, end: Colors.black).animate(_controller);
+    _colorAnimation = ColorTween(begin: Colors.transparent, end: Colors.white).animate(_controller);
 
     _controller.addListener(() {
       setState(() {});
@@ -49,7 +49,7 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
               alignment: Alignment.center,
               children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(10.0),
+                  borderRadius: BorderRadius.circular(0.0),
                   child: Image.asset(
                     this.widget.imageUrl,
                     color: this.widget.mobile ? null : Color.fromRGBO(128,128,128, this._opacityAnimation.value),
@@ -66,24 +66,22 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
                       style: TextStyle(
                         color: _colorAnimation.value,
                         fontSize: 32,
+                        //fontWeight: FontWeight.bold,
+                        fontFamily: "Vesper",
                         fontWeight: FontWeight.w100
                       ),
                     ),
-                    Text(
-                      "---",
-                      style: TextStyle(
-                          color: _colorAnimation.value,
-                          fontSize: 32,
-                          fontWeight: FontWeight.w100
-                      ),
-                    ),
+                    SizedBox(height: 6,),
+                    Divider(color: Colors.white, thickness: 1.0, endIndent: 130.0, indent: 130.0, height: 1,),
+                    SizedBox(height: 20,),
                     Text(
                       this.widget.text,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: _colorAnimation.value,
-                        fontSize: 22,
-                        fontWeight: FontWeight.w100
+                        fontSize: 18,
+                        fontFamily: "Linux"
+                        //fontWeight: FontWeight.w100
                       ),
                     )
                   ],

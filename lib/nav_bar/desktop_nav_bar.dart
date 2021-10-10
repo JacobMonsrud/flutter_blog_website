@@ -27,29 +27,31 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
           style: TextStyle(
               color: Colors.black,
               fontSize: 22.0,
+              fontFamily: "Vesper",
+              letterSpacing: 2.0
           ),
         ),
         SelectableText(
           "Amanda Stensgaard",
           style: TextStyle(
             color: Colors.black,
-            fontSize: 42.0,
-            fontFamily: "Nunito"
+            fontSize: 76.0,
+            fontFamily: "Moon"
           ),
         ),
-        SizedBox(height: 30.0,),
+        //SizedBox(height: 0.0,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               height: 80,
-              width: 350,
+              width: 200,
               child: TextButton(
                 child: Text("Artikler",
                   style: TextStyle(
-                      color: _articles_pressed ? Colors.lightGreen : Colors.black,
-                      fontSize: 32.0,
-                      fontWeight: FontWeight.bold,
+                      color: _articles_pressed ? Color.fromRGBO(180, 143, 143, 1) : Colors.black,
+                      letterSpacing: 3.0,
+                      fontSize: 24.0,
                   ),
                 ),
                 onPressed: () {
@@ -66,17 +68,17 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
                 ),
               ),
             ),
-            Container(child: VerticalDivider(color: Colors.black, thickness: 1.0 , endIndent: 0.0, indent: 0.0, width: 10,),height: 70,),
+            //Container(child: VerticalDivider(color: Colors.black, thickness: 1.0 , endIndent: 0.0, indent: 0.0, width: 10,),height: 70,),
             //SizedBox(width: 120,),
             Container(
               height: 80,
-              width: 350,
+              width: 200,
               child: TextButton(
-                child: Text("Madblog",
+                child: Text("Opskrifter",
                   style: TextStyle(
-                      color: _blog_pressed ? Colors.lightGreen : Colors.black,
-                      fontSize: 32.0,
-                      fontWeight: FontWeight.bold
+                      color: _blog_pressed ? Color.fromRGBO(180, 143, 143, 1) : Colors.black,
+                      fontSize: 24.0,
+                      letterSpacing: 3.0
                   ),
                 ),
                 onPressed: () {
@@ -94,17 +96,17 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
               ),
             ),
             //SizedBox(width: 120,),
-            Container(child: VerticalDivider(color: Colors.black, thickness: 1.0, endIndent: 0.0, indent: 0.0, width: 10,),height: 70,),
+            //Container(child: VerticalDivider(color: Colors.black, thickness: 1.0, endIndent: 0.0, indent: 0.0, width: 10,),height: 70,),
             //SizedBox(width: 120,),
             Container(
               height: 80,
-              width: 350,
+              width: 200,
               child: TextButton(
                 child: Text("Kontakt",
                   style: TextStyle(
-                    color: _contact_pressed ? Colors.lightGreen : Colors.black,
-                    fontSize: 32.0,
-                    fontWeight: FontWeight.bold
+                    color: _contact_pressed ? Color.fromRGBO(180, 143, 143, 1) : Colors.black,
+                    fontSize: 24.0,
+                    letterSpacing: 3.0,
                   ),
                 ),
                 onPressed: () {

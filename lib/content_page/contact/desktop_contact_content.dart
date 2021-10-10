@@ -13,11 +13,11 @@ class DesktopContactContent extends StatefulWidget {
 }
 
 class _DesktopContactContentState extends State<DesktopContactContent> {
-  final TextStyle _textStyleText = const TextStyle(fontSize: 24, fontWeight: FontWeight.w100);
+  final TextStyle _textStyleText = const TextStyle(fontSize: 24);
 
-  final TextStyle _textStyle = const TextStyle(fontSize: 32, fontWeight: FontWeight.bold);
+  final TextStyle _textStyle = const TextStyle(fontSize: 26, fontFamily: "Linux", letterSpacing: 3.0, fontWeight: FontWeight.bold);
 
-  final image = Image.asset("assets/images/kopi.jpg");
+  final image = Image.asset("assets/images/amanda.jpg");
   double _addedHeight = 1217.374464438732;
 
   @override
@@ -42,6 +42,12 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
+                alignment: Alignment.centerRight,
+                width: 460,
+                child: this.image,
+              ),
+              SizedBox(width: 80.0,),
+              Container(
                 width: 460,
                 child: SelectableText.rich(
                   TextSpan(
@@ -49,7 +55,7 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
                     style: this._textStyleText,
                     children: <TextSpan>[
                       TextSpan(
-                        text: "Amanda Stensgaard\n+45 98765432\n",
+                        text: "\n\n\nAmanda Stensgaard\n+45 98765432\n",
                         style: this._textStyle,
                       ),
                       TextSpan(
@@ -62,12 +68,12 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
                   )
                 ),
               ),
-              SizedBox(width: 20,),
-              Container(
-                alignment: Alignment.centerRight,
-                width: 460,
-                child: this.image,
-              ),
+              //SizedBox(width: 80,),
+              //Container(
+              //  alignment: Alignment.centerRight,
+              //  width: 460,
+              //  child: this.image,
+              //),
             ],
           ),
           SizedBox(height: 25,),

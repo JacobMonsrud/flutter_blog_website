@@ -20,7 +20,7 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
             children: [
               // Col 1
               Container(
-                width: 360,
+                width: 340,
                 child: Column(
                   children: [
                     // Col1Start
@@ -33,7 +33,7 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
               ),
               // Col 2
               Container(
-                width: 360,
+                width: 340,
                 child: Column(
                   children: [
                     // Col2Start
@@ -46,7 +46,7 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
               ),
               // Col 3
               Container(
-                width: 360,
+                width: 340,
                 child: Column(
                   children: [
                     // Col3Start
