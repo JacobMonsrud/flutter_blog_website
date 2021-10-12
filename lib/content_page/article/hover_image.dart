@@ -72,7 +72,6 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
                       style: TextStyle(
                         color: _colorAnimation.value,
                         fontSize: 32,
-                        //fontWeight: FontWeight.bold,
                         fontFamily: "Vesper",
                         fontWeight: FontWeight.w100
                       ),
