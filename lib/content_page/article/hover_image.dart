@@ -36,6 +36,12 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(8, 3, 8, 13),
@@ -72,7 +78,7 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
                       ),
                     ),
                     SizedBox(height: 6,),
-                    Divider(color: Colors.white, thickness: 1.0, endIndent: 130.0, indent: 130.0, height: 1,),
+                    Divider(color: _colorAnimation.value, thickness: 1.0, endIndent: 130.0, indent: 130.0,),
                     SizedBox(height: 20,),
                     Text(
                       this.widget.text,

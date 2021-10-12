@@ -12,11 +12,44 @@ class DesktopNavBar extends StatefulWidget {
   _DesktopNavBarState createState() => _DesktopNavBarState();
 }
 
-class _DesktopNavBarState extends State<DesktopNavBar> {
+class _DesktopNavBarState extends State<DesktopNavBar> with SingleTickerProviderStateMixin {
 
   bool _contact_pressed = false;
   bool _blog_pressed = false;
   bool _articles_pressed = true;
+
+  bool _hover1 = false;
+  bool _hover2 = false;
+  bool _hover3 = false;
+
+  late AnimationController _controller;
+  late AnimationController _controller2;
+  late AnimationController _controller3;
+  late Animation<Color?> _colorAnimation;
+  late Animation<Color?> _colorAnimation2;
+  late Animation<Color?> _colorAnimation3;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      duration: Duration(milliseconds: 200),
+      vsync: this,
+    );
+
+    _colorAnimation = ColorTween(begin: Colors.black, end: Color.fromRGBO(180, 143, 143, 1)).animate(_controller);
+
+    _controller.addListener(() {
+      setState(() {});
+    });
+
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,25 +79,29 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
             Container(
               height: 80,
               width: 200,
-              child: TextButton(
-                child: Text("Artikler",
-                  style: TextStyle(
-                      color: _articles_pressed ? Color.fromRGBO(180, 143, 143, 1) : Colors.black,
-                      letterSpacing: 3.0,
-                      fontSize: 24.0,
+              child: MouseRegion(
+                onEnter: (s) {_hover1 = true; _controller.forward();},
+                onExit: (s) {_hover1 = false; _controller.reverse();},
+                child: TextButton(
+                  child: Text("Artikler",
+                    style: TextStyle(
+                        color: _articles_pressed ? Color.fromRGBO(180, 143, 143, 1) : (_hover1 ? _colorAnimation.value : Colors.black),
+                        letterSpacing: 3.0,
+                        fontSize: 24.0,
+                    ),
                   ),
-                ),
-                onPressed: () {
-                  setState(() {
-                    _contact_pressed = false;
-                    _blog_pressed = false;
-                    _articles_pressed = true;
-                    this.widget.article_callback();
-                  });
-                },
-                style: ButtonStyle(
-                  splashFactory: NoSplash.splashFactory,
-                  overlayColor: MaterialStateProperty.all(Colors.transparent)
+                  onPressed: () {
+                    setState(() {
+                      _contact_pressed = false;
+                      _blog_pressed = false;
+                      _articles_pressed = true;
+                      this.widget.article_callback();
+                    });
+                  },
+                  style: ButtonStyle(
+                    splashFactory: NoSplash.splashFactory,
+                    overlayColor: MaterialStateProperty.all(Colors.transparent)
+                  ),
                 ),
               ),
             ),
@@ -73,25 +110,29 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
             Container(
               height: 80,
               width: 200,
-              child: TextButton(
-                child: Text("Opskrifter",
-                  style: TextStyle(
-                      color: _blog_pressed ? Color.fromRGBO(180, 143, 143, 1) : Colors.black,
-                      fontSize: 24.0,
-                      letterSpacing: 3.0
+              child: MouseRegion(
+                onEnter: (s) {_hover2 = true; _controller.forward();},
+                onExit: (s) {_hover2 = false; _controller.reverse();},
+                child: TextButton(
+                  child: Text("Opskrifter",
+                    style: TextStyle(
+                        color: _blog_pressed ? Color.fromRGBO(180, 143, 143, 1) : (_hover2 ? _colorAnimation.value : Colors.black),
+                        fontSize: 24.0,
+                        letterSpacing: 3.0
+                    ),
                   ),
-                ),
-                onPressed: () {
-                  setState(() {
-                    _contact_pressed = false;
-                    _blog_pressed = true;
-                    _articles_pressed = false;
-                    this.widget.blog_callback();
-                  });
-                },
-                style: ButtonStyle(
-                  splashFactory: NoSplash.splashFactory,
-                  overlayColor: MaterialStateProperty.all(Colors.transparent)
+                  onPressed: () {
+                    setState(() {
+                      _contact_pressed = false;
+                      _blog_pressed = true;
+                      _articles_pressed = false;
+                      this.widget.blog_callback();
+                    });
+                  },
+                  style: ButtonStyle(
+                    splashFactory: NoSplash.splashFactory,
+                    overlayColor: MaterialStateProperty.all(Colors.transparent)
+                  ),
                 ),
               ),
             ),
@@ -101,25 +142,29 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
             Container(
               height: 80,
               width: 200,
-              child: TextButton(
-                child: Text("Kontakt",
-                  style: TextStyle(
-                    color: _contact_pressed ? Color.fromRGBO(180, 143, 143, 1) : Colors.black,
-                    fontSize: 24.0,
-                    letterSpacing: 3.0,
+              child: MouseRegion(
+                onEnter: (s) {_hover3 = true; _controller.forward();},
+                onExit: (s) {_hover3 = false; _controller.reverse();},
+                child: TextButton(
+                  child: Text("Kontakt",
+                    style: TextStyle(
+                      color: _contact_pressed ? Color.fromRGBO(180, 143, 143, 1) : (_hover3 ? _colorAnimation.value : Colors.black),
+                      fontSize: 24.0,
+                      letterSpacing: 3.0,
+                    ),
                   ),
-                ),
-                onPressed: () {
-                  setState(() {
-                    _contact_pressed = true;
-                    _blog_pressed = false;
-                    _articles_pressed = false;
-                    this.widget.contact_callback();
-                  });
-                },
-                style: ButtonStyle(
-                  splashFactory: NoSplash.splashFactory,
-                  overlayColor: MaterialStateProperty.all(Colors.transparent)
+                  onPressed: () {
+                    setState(() {
+                      _contact_pressed = true;
+                      _blog_pressed = false;
+                      _articles_pressed = false;
+                      this.widget.contact_callback();
+                    });
+                  },
+                  style: ButtonStyle(
+                    splashFactory: NoSplash.splashFactory,
+                    overlayColor: MaterialStateProperty.all(Colors.transparent)
+                  ),
                 ),
               ),
             ),

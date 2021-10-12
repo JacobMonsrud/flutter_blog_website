@@ -18,7 +18,6 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
   final TextStyle _textStyle = const TextStyle(fontSize: 26, fontFamily: "Linux", letterSpacing: 3.0, fontWeight: FontWeight.bold);
 
   final image = Image.asset("assets/images/amanda.jpg");
-  double _addedHeight = 1217.374464438732;
 
   @override
   void didChangeDependencies() {
@@ -28,11 +27,6 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(milliseconds: 400), () {
-      setState(() {
-        this._addedHeight = 0.0;
-      });
-    });
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
       child: Column(
@@ -78,9 +72,6 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
           ),
           SizedBox(height: 25,),
           BottomOfPage(),
-          Container(
-            height: this._addedHeight,
-          ),
         ],
       ),
     );
