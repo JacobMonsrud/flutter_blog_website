@@ -69,4 +69,3 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
     _contact_pressed = contact;
   }
 }
-

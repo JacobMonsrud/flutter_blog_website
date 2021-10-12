@@ -49,18 +49,16 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
         child: MouseRegion(
           onEnter: (s) {_controller.forward();},
           onExit: (s) {_controller.reverse();},
+          cursor: SystemMouseCursors.click,
           child: GestureDetector(
             onTap: () {launch(this.widget.articleUrl);},
             child: Stack(
               alignment: Alignment.center,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(0.0),
-                  child: Image.asset(
-                    this.widget.imageUrl,
-                    color: this.widget.mobile ? null : Color.fromRGBO(128,128,128, this._opacityAnimation.value),
-                    colorBlendMode: this.widget.mobile ? null : BlendMode.srcATop
-                  ),
+                Image.asset(
+                  this.widget.imageUrl,
+                  color: this.widget.mobile ? null : Color.fromRGBO(128,128,128, this._opacityAnimation.value),
+                  colorBlendMode: this.widget.mobile ? null : BlendMode.srcATop
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -72,7 +70,6 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
                       style: TextStyle(
                         color: _colorAnimation.value,
                         fontSize: 32,
-                        //fontWeight: FontWeight.bold,
                         fontFamily: "Vesper",
                         fontWeight: FontWeight.w100
                       ),
@@ -87,7 +84,6 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
                         color: _colorAnimation.value,
                         fontSize: 18,
                         fontFamily: "Linux"
-                        //fontWeight: FontWeight.w100
                       ),
                     )
                   ],
