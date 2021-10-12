@@ -1,13 +1,22 @@
 import 'package:amanda_stensgaard/content_page/article/hover_image.dart';
 import 'package:amanda_stensgaard/content_page/bottom_of_page.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 class DesktopArticleContent extends StatefulWidget {
   const DesktopArticleContent({Key? key}) : super(key: key);
   @override
   _DesktopArticleContentState createState() => _DesktopArticleContentState();
 }
 class _DesktopArticleContentState extends State<DesktopArticleContent> {
+
+  final image = Image.asset("assets/images/amanda.jpg");
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    precacheImage(this.image.image, context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(

@@ -40,7 +40,6 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
             fontFamily: "Moon"
           ),
         ),
-        //SizedBox(height: 0.0,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

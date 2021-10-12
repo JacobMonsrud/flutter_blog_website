@@ -20,12 +20,6 @@ class _DesktopContactContentState extends State<DesktopContactContent> {
   final image = Image.asset("assets/images/amanda.jpg");
 
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    precacheImage(this.image.image, context);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(0, 5, 0, 10),
