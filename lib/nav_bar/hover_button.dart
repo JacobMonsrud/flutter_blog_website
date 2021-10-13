@@ -6,8 +6,10 @@ class HoverButton extends StatefulWidget {
   final Function(String) pressed;
   final Function(bool, bool, bool) articles_blog_contact_pressed;
   final String title;
+  final double height, width;
+  final bool mobile;
 
-  const HoverButton({Key? key, required this.pressed, required this.title, required this.callback, required this.articles_blog_contact_pressed}) : super(key: key);
+  const HoverButton({Key? key, required this.mobile, required this.pressed, required this.title, required this.callback, required this.articles_blog_contact_pressed, required this.height, required this.width}) : super(key: key);
 
   @override
   _HoverButtonState createState() => _HoverButtonState();
@@ -45,14 +47,14 @@ class _HoverButtonState extends State<HoverButton> with SingleTickerProviderStat
       onEnter: (s) {_controller.forward();},
       onExit: (s) {_controller.reverse();},
       child: Container(
-        height: 80,
-        width: 200,
+        height: this.widget.height,
+        width: this.widget.width,
         child: TextButton(
           child: Text(this.widget.title,
             style: TextStyle(
               color: this.widget.pressed(this.widget.title) ? Color.fromRGBO(180, 143, 143, 1) : _colorAnimation.value,
               letterSpacing: 3.0,
-              fontSize: 24.0,
+              fontSize: this.widget.mobile ? 14 : 24.0,
             ),
           ),
           onPressed: () {

@@ -3,12 +3,15 @@ import 'package:url_launcher/url_launcher.dart';
 
 
 class BottomOfPage extends StatelessWidget {
-  const BottomOfPage({Key? key}) : super(key: key);
+
+  final double width;
+
+  const BottomOfPage({Key? key, required this.width}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 850,
+      width: width,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

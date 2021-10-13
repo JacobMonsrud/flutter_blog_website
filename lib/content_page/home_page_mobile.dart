@@ -1,5 +1,6 @@
 import 'package:amanda_stensgaard/nav_bar/nav_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'article/articles_content.dart';
 import 'blog/blog_content.dart';
@@ -30,7 +31,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
             blog_callback: blog_callback,
           ),
           AnimatedSwitcher(
-            duration: const Duration(seconds: 0, milliseconds: 400),
+            duration: const Duration(seconds: 0, milliseconds: 0),
             child: getContent(),
           ),
         ],
@@ -45,9 +46,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
   }
 
   void blog_callback() {
-    setState(() {
-      this._content = 1;
-    });
+    launch("https://filibaba.dk");
   }
 
   void contact_callback() {

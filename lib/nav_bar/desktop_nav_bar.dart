@@ -43,9 +43,9 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            HoverButton(pressed: pressed, title: "Artikler", callback: this.widget.article_callback, articles_blog_contact_pressed: articles_blog_contact_pressed),
-            HoverButton(pressed: pressed, title: "Opskrifter", callback: this.widget.blog_callback, articles_blog_contact_pressed: articles_blog_contact_pressed),
-            HoverButton(pressed: pressed, title: "Kontakt", callback: this.widget.contact_callback, articles_blog_contact_pressed: articles_blog_contact_pressed),
+            HoverButton(mobile: false, pressed: pressed, title: "Artikler", callback: this.widget.article_callback, articles_blog_contact_pressed: articles_blog_contact_pressed, width: 208, height: 80.0),
+            HoverButton(mobile: false, pressed: pressed, title: "Opskrifter", callback: this.widget.blog_callback, articles_blog_contact_pressed: articles_blog_contact_pressed, width: 208, height: 80.0),
+            HoverButton(mobile: false, pressed: pressed, title: "Kontakt", callback: this.widget.contact_callback, articles_blog_contact_pressed: articles_blog_contact_pressed, width: 208, height: 80.0),
           ],
         ),
       ],

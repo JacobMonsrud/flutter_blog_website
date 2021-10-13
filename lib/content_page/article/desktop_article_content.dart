@@ -70,7 +70,7 @@ class _DesktopArticleContentState extends State<DesktopArticleContent> {
             ],
           ),
           SizedBox(height: 20,),
-          BottomOfPage(),
+          BottomOfPage(width: 850,),
         ],
       ),
     );
