@@ -1,3 +1,4 @@
+import 'package:amanda_stensgaard/nav_bar/hover_button.dart';
 import 'package:flutter/material.dart';
 
 class DesktopNavBar extends StatefulWidget {
@@ -27,104 +28,43 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
           style: TextStyle(
               color: Colors.black,
               fontSize: 22.0,
+              fontFamily: "Vesper",
+              letterSpacing: 2.0
           ),
         ),
         SelectableText(
           "Amanda Stensgaard",
           style: TextStyle(
             color: Colors.black,
-            fontSize: 42.0,
-            fontFamily: "Nunito"
+            fontSize: 76.0,
+            fontFamily: "Moon"
           ),
         ),
-        SizedBox(height: 30.0,),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 80,
-              width: 350,
-              child: TextButton(
-                child: Text("Artikler",
-                  style: TextStyle(
-                      color: _articles_pressed ? Colors.lightGreen : Colors.black,
-                      fontSize: 32.0,
-                      fontWeight: FontWeight.bold,
-                  ),
-                ),
-                onPressed: () {
-                  setState(() {
-                    _contact_pressed = false;
-                    _blog_pressed = false;
-                    _articles_pressed = true;
-                    this.widget.article_callback();
-                  });
-                },
-                style: ButtonStyle(
-                  splashFactory: NoSplash.splashFactory,
-                  overlayColor: MaterialStateProperty.all(Colors.transparent)
-                ),
-              ),
-            ),
-            Container(child: VerticalDivider(color: Colors.black, thickness: 1.0 , endIndent: 0.0, indent: 0.0, width: 10,),height: 70,),
-            //SizedBox(width: 120,),
-            Container(
-              height: 80,
-              width: 350,
-              child: TextButton(
-                child: Text("Madblog",
-                  style: TextStyle(
-                      color: _blog_pressed ? Colors.lightGreen : Colors.black,
-                      fontSize: 32.0,
-                      fontWeight: FontWeight.bold
-                  ),
-                ),
-                onPressed: () {
-                  setState(() {
-                    _contact_pressed = false;
-                    _blog_pressed = true;
-                    _articles_pressed = false;
-                    this.widget.blog_callback();
-                  });
-                },
-                style: ButtonStyle(
-                  splashFactory: NoSplash.splashFactory,
-                  overlayColor: MaterialStateProperty.all(Colors.transparent)
-                ),
-              ),
-            ),
-            //SizedBox(width: 120,),
-            Container(child: VerticalDivider(color: Colors.black, thickness: 1.0, endIndent: 0.0, indent: 0.0, width: 10,),height: 70,),
-            //SizedBox(width: 120,),
-            Container(
-              height: 80,
-              width: 350,
-              child: TextButton(
-                child: Text("Kontakt",
-                  style: TextStyle(
-                    color: _contact_pressed ? Colors.lightGreen : Colors.black,
-                    fontSize: 32.0,
-                    fontWeight: FontWeight.bold
-                  ),
-                ),
-                onPressed: () {
-                  setState(() {
-                    _contact_pressed = true;
-                    _blog_pressed = false;
-                    _articles_pressed = false;
-                    this.widget.contact_callback();
-                  });
-                },
-                style: ButtonStyle(
-                  splashFactory: NoSplash.splashFactory,
-                  overlayColor: MaterialStateProperty.all(Colors.transparent)
-                ),
-              ),
-            ),
+            HoverButton(mobile: false, pressed: pressed, title: "Artikler", callback: this.widget.article_callback, articles_blog_contact_pressed: articles_blog_contact_pressed, width: 208, height: 80.0),
+            HoverButton(mobile: false, pressed: pressed, title: "Opskrifter", callback: this.widget.blog_callback, articles_blog_contact_pressed: articles_blog_contact_pressed, width: 208, height: 80.0),
+            HoverButton(mobile: false, pressed: pressed, title: "Kontakt", callback: this.widget.contact_callback, articles_blog_contact_pressed: articles_blog_contact_pressed, width: 208, height: 80.0),
           ],
         ),
       ],
     );
   }
-}
 
+  bool pressed(String s) {
+    if (s == "Artikler") {
+      return _articles_pressed;
+    } else if(s == "Opskrifter") {
+      return _blog_pressed;
+    } else {
+      return _contact_pressed;
+    }
+  }
+
+  void articles_blog_contact_pressed(bool articles, bool blog, bool contact) {
+    _articles_pressed = articles;
+    _blog_pressed = blog;
+    _contact_pressed = contact;
+  }
+}
