@@ -62,24 +62,24 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       this.widget.header,
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.left,
                       style: TextStyle(
                         color: _colorAnimation.value,
-                        fontSize: 32,
+                        fontSize: 24,
                         fontFamily: "Vesper",
                         fontWeight: FontWeight.w100
                       ),
                     ),
                     SizedBox(height: 6,),
-                    Divider(color: _colorAnimation.value, thickness: 1.0, endIndent: 130.0, indent: 130.0,),
+                    Divider(color: _colorAnimation.value, thickness: 1.0, endIndent: 200.0, indent: 5.0,),
                     SizedBox(height: 20,),
                     Text(
                       this.widget.text,
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.left,
                       style: TextStyle(
                         color: _colorAnimation.value,
                         fontSize: 18,
