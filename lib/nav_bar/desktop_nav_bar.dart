@@ -23,6 +23,7 @@ class _DesktopNavBarState extends State<DesktopNavBar> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Image.network("https://firebasestorage.googleapis.com/v0/b/amandastensgaard-98fd7.appspot.com/o/hej.jpg?alt=media&token=fec4364f-7b12-4e54-899b-0d8e3946058d"),
         SelectableText(
           "Journalist",
           style: TextStyle(

@@ -16,24 +16,46 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  void getImages() async {
-    // First get from firestore. Then if no URL, get URL from storage.
-    CollectionReference collectionRef = FirebaseFirestore.instance.collection('articles');
-    QuerySnapshot querySnapshot = await collectionRef.get();
-    for (var doc in querySnapshot.docs) {
-      print(doc.data().toString());
+  late List<QueryDocumentSnapshot> docs;
+  bool dataFetched = false;
+
+  // This method returns the firestore data and generates imageUrl if needed.
+  Future<List<QueryDocumentSnapshot>> getImagesMetaData() async {
+    if (dataFetched) {return docs;}
+
+    else {
+      CollectionReference _collectionRef = FirebaseFirestore.instance.collection('articles');
+      QuerySnapshot querySnapshot = await _collectionRef.get();
+
+      int updated = 0;
+
+      for (var doc in querySnapshot.docs) {
+        if (doc["imageUrl"] == "") {
+          updated += 1;
+          String imageUrl = await FirebaseStorage.instance.ref("/" + doc["file"]).getDownloadURL();
+          await _collectionRef.doc(doc.id).update({"imageUrl": imageUrl});
+        }
+      }
+
+      if (updated > 0) {
+        _collectionRef = FirebaseFirestore.instance.collection('articles');
+        querySnapshot = await _collectionRef.get();
+      }
+
+      dataFetched = true;
+      docs = querySnapshot.docs;
+      return docs;
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    //getImages();
     return Scaffold(
       backgroundColor: Color.fromRGBO(242, 238, 228, 1),
       body: LayoutBuilder(
         builder: (context, constraints){
           if (!isMobile()) {
-            return DesktopHomePage();
+            return DesktopHomePage(getImagesMetaData: getImagesMetaData);
           }
           else {
             return MobileHomePage();

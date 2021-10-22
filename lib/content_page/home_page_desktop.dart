@@ -1,4 +1,6 @@
+import 'package:amanda_stensgaard/content_page/article/hover_image.dart';
 import 'package:amanda_stensgaard/nav_bar/nav_bar.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
@@ -9,7 +11,10 @@ import 'blog/blog_content.dart';
 import 'contact/contact_content.dart';
 
 class DesktopHomePage extends StatefulWidget {
-  const DesktopHomePage({Key? key}) : super(key: key);
+
+  final Function() getImagesMetaData;
+
+  const DesktopHomePage({Key? key, required this.getImagesMetaData}) : super(key: key);
 
   @override
   _DesktopHomePageState createState() => _DesktopHomePageState();
@@ -17,11 +22,35 @@ class DesktopHomePage extends StatefulWidget {
 
 class _DesktopHomePageState extends State<DesktopHomePage> {
 
-  ArticleContent _articleContent = ArticleContent();
-  ContactContent _contactContent = ContactContent();
-  BlogContent _blogContent = BlogContent();
+  late ArticleContent _articleContent;// = ArticleContent();
+  late ContactContent _contactContent;// = ContactContent();
+  //BlogContent _blogContent = BlogContent();
   int _content = 0;
   final _controller = ScrollController();
+
+  HoverImage createHoverImage(QueryDocumentSnapshot doc) {
+    return HoverImage(imageUrl: doc["imageUrl"], articleUrl: doc["articleUrl"], mobile: false, header: doc["type"], text: doc["title"]);
+  }
+  
+  Future<List<List<HoverImage>>> getHoverImagesColumns() async {
+    List<HoverImage> col1 = [];
+    List<HoverImage> col2 = [];
+    List<HoverImage> col3 = [];
+
+    List<QueryDocumentSnapshot> docs = await this.widget.getImagesMetaData();
+
+    for (var doc in docs) {
+      if (doc["col"] == "1") {
+        col1.add(createHoverImage(doc));
+      } else if (doc["col"] == "2") {
+        col2.add(createHoverImage(doc));
+      } else {
+        col3.add(createHoverImage(doc));
+      }
+    }
+
+    return [col1, col2, col3];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +77,32 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
               contact_callback: contact_callback,
               blog_callback: blog_callback,
             ),
-            AnimatedSwitcher(
-              duration: const Duration(seconds: 0, milliseconds: 0),
-              child: getContent(),
+            FutureBuilder(
+                future: getHoverImagesColumns(),
+                builder: (BuildContext context, AsyncSnapshot<List<List<HoverImage>>> snapshot) {
+                  if (snapshot.hasData) {
+                    _articleContent = ArticleContent(hoverImages: snapshot.data!,);
+                    _contactContent = ContactContent();
+                    return AnimatedSwitcher(
+                      duration: const Duration(seconds: 0, milliseconds: 0),
+                      child: getContent(),
+                    );
+                  } else {
+                    return Column(
+                      children: [
+                        Center(
+                          child: SizedBox(
+                            child: CircularProgressIndicator(
+                              color: Colors.black,
+                            ),
+                            width: 60,
+                            height: 60,
+                          ),
+                        ),
+                      ],
+                    );
+                  }
+                }
             ),
           ],
         ),
@@ -81,7 +133,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
     if (this._content == 0) {
       return this._articleContent;
     } else if (this._content == 1) {
-      return this._blogContent;
+      return this._articleContent;//this._blogContent;
     } else {
       return this._contactContent;
     }

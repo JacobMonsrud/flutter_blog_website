@@ -1,3 +1,4 @@
+import 'package:amanda_stensgaard/content_page/article/hover_image.dart';
 import 'package:flutter/material.dart';
 
 import 'desktop_article_content.dart';
@@ -5,7 +6,9 @@ import 'mobile_article_content.dart';
 
 class ArticleContent extends StatefulWidget {
 
-  const ArticleContent({Key? key}) : super(key: key);
+  final List<List<HoverImage>> hoverImages;
+
+  const ArticleContent({Key? key, required this.hoverImages}) : super(key: key);
 
   @override
   _ArticleContentState createState() => _ArticleContentState();
@@ -19,7 +22,7 @@ class _ArticleContentState extends State<ArticleContent> {
         if (!isMobile()) {
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 40),
-            child: DesktopArticleContent(),
+            child: DesktopArticleContent(hoverImages: this.widget.hoverImages),
           );
         } else {
           return Padding(

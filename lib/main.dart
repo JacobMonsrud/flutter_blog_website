@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'content_page/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
@@ -32,7 +31,7 @@ class MyApp extends StatelessWidget {
               Center(
                 child: SizedBox(
                   child: CircularProgressIndicator(
-                    color: Color.fromRGBO(180, 143, 143, 1),
+                    color: Colors.black,
                   ),
                   width: 60,
                   height: 60,

@@ -15,7 +15,7 @@ class MobileHomePage extends StatefulWidget {
 
 class _MobileHomePageState extends State<MobileHomePage> {
 
-  ArticleContent _articleContent = const ArticleContent();
+  ArticleContent _articleContent = const ArticleContent(hoverImages: [],);
   ContactContent _contactContent = const ContactContent();
   BlogContent _blogContent = const BlogContent();
   int _content = 0;

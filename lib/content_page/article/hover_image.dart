@@ -55,7 +55,7 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
             child: Stack(
               alignment: Alignment.center,
               children: [
-                Image.asset(
+                Image.network(
                   this.widget.imageUrl,
                   color: this.widget.mobile ? null : Color.fromRGBO(128,128,128, this._opacityAnimation.value),
                   colorBlendMode: this.widget.mobile ? null : BlendMode.srcATop
