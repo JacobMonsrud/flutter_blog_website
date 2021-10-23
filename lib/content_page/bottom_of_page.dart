@@ -15,7 +15,7 @@ class BottomOfPage extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          IconButton(onPressed: () => {launch("https://linkedin.com")},
+          IconButton(onPressed: () => {launch("https://www.linkedin.com/in/amanda-stensgaard-456860191/")},
             icon: Image.asset("assets/images/linkedin.png"),
             hoverColor: Colors.transparent,
             highlightColor: Colors.transparent,

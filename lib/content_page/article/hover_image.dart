@@ -79,7 +79,7 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
                       ),
                     ),
                     SizedBox(height: 0,),
-                    Divider(color: _colorAnimation.value, thickness: 1.0, endIndent: 200.0, indent: 5.0,),
+                    Divider(color: _colorAnimation.value, thickness: 1.0, endIndent: 200.0, indent: 5.0, height: 1,),
                     SizedBox(height: 10,),
                     Padding(
                       padding: const EdgeInsets.only(left: 5),
@@ -88,7 +88,7 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           color: _colorAnimation.value,
-                          fontSize: 18,
+                          fontSize: 22,
                           fontFamily: "Linux"
                         ),
                       ),
