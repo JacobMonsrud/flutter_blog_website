@@ -20,12 +20,13 @@ class _TextContainerState extends State<TextContainer> {
 
   final TextStyle _textStyle = const TextStyle(fontSize: 26, fontFamily: "Linux", letterSpacing: 3.0, fontWeight: FontWeight.bold);
 
-  final String text = "Vi danskere er ikke ens. Ung/gammel, land/by, lønmodtager/selvstændig, offentlig ansat/privat ansat, rask/syg, dansk i mange generationer/anden etnisk baggrund. Men vi har et skæbnefællesskab. Bor alle i mulighedernes samfund – præget af velstand, velfærd, tryghed og frihed. Skabt over generationer i vished om, at forbedringer forudsætter forandringer. Og at vores velstand og egenart er skabt i samhandel og samarbejde med resten af verden. Muligheden for at give et bedre land videre til næste generation begrænses af en ny skillelinje – på tværs af den traditionelle højre- og venstreskala. Hvor det tidligere handlede om individ over for stat og balancen mellem frihed og fællesskab.\n\n";
+  final String text = "Har du brug for artikler, tekst, pressearbejde, SEO-optimering eller hjælp til sociale medier?\nSå send mig en mail på ";
+  final String text2 =  ".\n\nJeg er uddannet journalist og specialiseret i magasinjournalistik. For det meste skriver jeg interviews og features for Femina, men jeg kan også hjælpe med øvrigt journalistisk indhold som reportager, nyhedsbreve eller indhold til bl.a. Instagram og Facebook.\n\nHvis du vil mødes til en kop kaffe og snakke nærmere om et samarbejde, kan vi også finde ud af det.\n\nJeg glæder mig til at høre fra dig.\n\nKærlig hilsen\nAmanda\n\n";
 
   final String mobile_contact = "Amanda Stensgaard\n";
   final String contact = "\n\n\n\nAmanda Stensgaard\n";
   final String phone = "+45 12345678\n";
-  final String mail_text = "amanda...@gmail.com";
+  final String mail_text = "amandastensgaard1@hotmail.com";
 
   @override
   Widget build(BuildContext context) {
@@ -38,20 +39,14 @@ class _TextContainerState extends State<TextContainer> {
               style: this._textStyleText,
               children: <TextSpan>[
                 TextSpan(
-                  text: this.widget.mobile ? mobile_contact : contact,
-                  style: this._textStyle,
-                ),
-                TextSpan(
-                    text: phone,
-                    style: this._textStyle,
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () => {launch("tel:" + phone)}
-                ),
-                TextSpan(
                     text: mail_text,
-                    style: this._textStyle,
+                    style: this._textStyleText,
                     recognizer: TapGestureRecognizer()
                       ..onTap = () => {launch("mailto:" + mail_text)}
+                ),
+                TextSpan(
+                  text: this.text2,
+                  style: this._textStyleText,
                 )
               ]
           )

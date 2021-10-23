@@ -64,26 +64,33 @@ class _HoverImageState extends State<HoverImage> with SingleTickerProviderStateM
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      this.widget.header,
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: _colorAnimation.value,
-                        fontSize: 24,
-                        fontFamily: "Vesper",
-                        fontWeight: FontWeight.w100
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5),
+                      child: Text(
+                        this.widget.header,
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: _colorAnimation.value,
+                          fontSize: 18,
+                          fontFamily: "Vesper",
+                          fontWeight: FontWeight.w100,
+                          fontStyle: FontStyle.italic,
+                        ),
                       ),
                     ),
-                    SizedBox(height: 6,),
+                    SizedBox(height: 0,),
                     Divider(color: _colorAnimation.value, thickness: 1.0, endIndent: 200.0, indent: 5.0,),
-                    SizedBox(height: 20,),
-                    Text(
-                      this.widget.text,
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: _colorAnimation.value,
-                        fontSize: 18,
-                        fontFamily: "Linux"
+                    SizedBox(height: 10,),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5),
+                      child: Text(
+                        this.widget.text,
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: _colorAnimation.value,
+                          fontSize: 18,
+                          fontFamily: "Linux"
+                        ),
                       ),
                     )
                   ],

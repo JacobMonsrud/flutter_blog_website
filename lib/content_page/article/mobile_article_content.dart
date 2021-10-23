@@ -2,6 +2,7 @@ import 'package:amanda_stensgaard/content_page/bottom_of_page.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'hover_image.dart';
+
 class MobileArticleContent extends StatefulWidget {
   const MobileArticleContent({Key? key}) : super(key: key);
   @override
