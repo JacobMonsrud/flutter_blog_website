@@ -40,9 +40,7 @@ class _MobileHomePageState extends State<MobileHomePage> {
     List<HoverImage> col2 = [];
     List<HoverImage> col3 = [];
 
-    print("Here");
     List<QueryDocumentSnapshot> docs = await this.widget.getImagesMetaData();
-    print("you there");
 
     for (var doc in docs) {
       if (doc["col"] == "1") {
@@ -57,10 +55,8 @@ class _MobileHomePageState extends State<MobileHomePage> {
     col1.sort((a, b) => a.row.compareTo(b.row));
     col2.sort((a, b) => a.row.compareTo(b.row));
     col3.sort((a, b) => a.row.compareTo(b.row));
-    print("wazzup");
     List<HoverImage> combined = [];
     int maxLength = math.max(col1.length, math.max(col2.length, col3.length));
-    print("max" + maxLength.toString());
     for (var i = 0; i < maxLength; i++) {
       if (col1.isNotEmpty) {
         combined.add(col1.removeAt(0));
@@ -72,7 +68,6 @@ class _MobileHomePageState extends State<MobileHomePage> {
         combined.add(col3.removeAt(0));
       }
     }
-    print("im here");
     return combined;
   }
 
