@@ -29,7 +29,13 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
   final _controller = ScrollController();
 
   HoverImage createHoverImage(QueryDocumentSnapshot doc) {
-    return HoverImage(imageUrl: doc["imageUrl"], articleUrl: doc["articleUrl"], mobile: false, header: doc["type"], text: doc["title"]);
+    var row;
+    try {
+      row = int.parse(doc["row"]);
+    } catch (e) {
+      row = 100;
+    }
+    return HoverImage(imageUrl: doc["imageUrl"], articleUrl: doc["articleUrl"], mobile: false, header: doc["type"], text: doc["title"], row: row,);
   }
   
   Future<List<List<HoverImage>>> getHoverImagesColumns() async {
@@ -48,6 +54,10 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
         col3.add(createHoverImage(doc));
       }
     }
+
+    col1.sort((a, b) => a.row.compareTo(b.row));
+    col2.sort((a, b) => a.row.compareTo(b.row));
+    col3.sort((a, b) => a.row.compareTo(b.row));
 
     return [col1, col2, col3];
   }
@@ -81,7 +91,7 @@ class _DesktopHomePageState extends State<DesktopHomePage> {
                 future: getHoverImagesColumns(),
                 builder: (BuildContext context, AsyncSnapshot<List<List<HoverImage>>> snapshot) {
                   if (snapshot.hasData) {
-                    _articleContent = ArticleContent(hoverImages: snapshot.data!,);
+                    _articleContent = ArticleContent(hoverImages: snapshot.data!, mobileHoverImages: [],);
                     _contactContent = ContactContent();
                     return AnimatedSwitcher(
                       duration: const Duration(seconds: 0, milliseconds: 0),

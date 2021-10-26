@@ -7,8 +7,9 @@ import 'mobile_article_content.dart';
 class ArticleContent extends StatefulWidget {
 
   final List<List<HoverImage>> hoverImages;
+  final List<HoverImage> mobileHoverImages;
 
-  const ArticleContent({Key? key, required this.hoverImages}) : super(key: key);
+  const ArticleContent({Key? key, required this.hoverImages, required this.mobileHoverImages}) : super(key: key);
 
   @override
   _ArticleContentState createState() => _ArticleContentState();
@@ -27,7 +28,7 @@ class _ArticleContentState extends State<ArticleContent> {
         } else {
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
-            child: MobileArticleContent(),
+            child: MobileArticleContent(hoverImages: this.widget.mobileHoverImages),
           );
         }
       },

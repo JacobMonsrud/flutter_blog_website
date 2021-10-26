@@ -5,8 +5,9 @@ class HoverImage extends StatefulWidget {
 
   final String imageUrl, articleUrl, header, text;
   final bool mobile;
+  final int row;
 
-  const HoverImage({Key? key, required this.imageUrl, required this.articleUrl, required this.mobile, required this.header, required this.text}) : super(key: key);
+  const HoverImage({Key? key, required this.imageUrl, required this.articleUrl, required this.mobile, required this.header, required this.text, required this.row}) : super(key: key);
 
   @override
   _HoverImageState createState() => _HoverImageState();

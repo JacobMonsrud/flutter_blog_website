@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage> {
             return DesktopHomePage(getImagesMetaData: getImagesMetaData);
           }
           else {
-            return MobileHomePage();
+            return MobileHomePage(getImagesMetaData: getImagesMetaData);
           }
         },
       ),

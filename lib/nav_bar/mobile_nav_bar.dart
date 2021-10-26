@@ -25,16 +25,6 @@ class _MobileNavBarState extends State<MobileNavBar> {
     final double width = (MediaQuery.of(context).size.width -50) / 3;
     return Column(
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            DropdownMenu(
-              article_callback: this.widget.article_callback,
-              contact_callback: this.widget.contact_callback,
-              blog_callback: this.widget.blog_callback,
-            ),
-          ],
-        ),
         SizedBox(height: 20.0,),
         Center(
           child: SelectableText(
